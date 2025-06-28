@@ -1,4 +1,14 @@
+# === 開発用ツールのデータ ===
 mailpit-data/
+
+# === Supabase関連 ===
 supabase/dev/
 supabase/volumes/
+
+# === フロントエンド（Next.js + ビルド成果物） ===
+frontend/node_modules/
+frontend/dist/
+frontend/.next/
+
+# === 一時ファイル・作業用 ===
 temp/

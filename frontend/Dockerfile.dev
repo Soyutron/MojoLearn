@@ -1,0 +1,12 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# package.json とロックファイルをコピー
+COPY package*.json ./
+
+# 依存関係をインストール
+RUN npm install
+
+# 開発サーバーを起動
+CMD ["npm", "run", "dev"]

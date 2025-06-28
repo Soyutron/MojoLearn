@@ -6,10 +6,11 @@
 
 ```
 docker-compose.dev.yml       # 開発環境用のDocker構成
+docker-compose.dev.yml       # ビルド確認用のDocker構成
 docker-compose.prod.yml      # 本番環境用のDocker構成
 
 .env.dev                     # 開発環境用の環境変数ファイル
-.env.prod                    # 本番環境用の環境変数ファイル
+.env.prod                    # 本番環境用の環境変数ファイル（ビルド確認でも使用）
 ```
 
 
@@ -35,12 +36,35 @@ docker compose --env-file .env.dev -f docker-compose.dev.yml down
 docker compose --env-file .env.dev -f docker-compose.dev.yml logs -f
 ```
 
+## 🌐 ビルド確認環境の使い方（本番と同じ条件）
+
+### 起動
+
+```bash
+docker compose --env-file .env.prod -f docker-compose.build.yml build --no-cache
+docker compose --env-file .env.prod -f docker-compose.build.yml up -d
+```
+
+
+### 停止
+
+```bash
+docker compose --env-file .env.prod -f docker-compose.build.yml down
+```
+
+
+### ログ確認
+
+```bash
+docker compose --env-file .env.prod -f docker-compose.build.yml logs -f
+```
 
 ## 🌐 本番環境の使い方
 
 ### 起動
 
 ```bash
+docker compose --env-file .env.prod -f docker-compose.prod.yml build --no-cache
 docker compose --env-file .env.prod -f docker-compose.prod.yml up -d
 ```
 
