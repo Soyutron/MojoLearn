@@ -6,7 +6,7 @@
 
 ```
 docker-compose.dev.yml       # 開発環境用のDocker構成
-docker-compose.dev.yml       # ビルド確認用のDocker構成
+docker-compose.build.yml       # ビルド確認用のDocker構成
 docker-compose.prod.yml      # 本番環境用のDocker構成
 
 .env.dev                     # 開発環境用の環境変数ファイル
