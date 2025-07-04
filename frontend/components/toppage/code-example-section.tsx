@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import { Copy, Check } from "lucide-react"
-import { cn } from "@/components/toppage/utils"
+import { cn } from "@/lib/utils"
 
 const mojoCode = `from time import now
 

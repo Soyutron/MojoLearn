@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import "./globals.css"
-import { cn } from "@/components/toppage/utils"
+import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: "Mojo — The language for AI developers",
