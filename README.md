@@ -19,6 +19,9 @@ docker-compose.prod.yml      # 本番環境用のDocker構成
 ### 起動
 
 ```bash
+docker volume rm mojo_node_modules
+docker compose --env-file .env.dev -f docker-compose.dev.yml build --no-cache nextjs
+
 docker compose --env-file .env.dev -f docker-compose.dev.yml up -d
 ```
 

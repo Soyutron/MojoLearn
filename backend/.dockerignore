@@ -1,0 +1,7 @@
+Dockerfile*
+npm-debug.log
+.dockerignore
+.git
+.gitignore
+.vscode
+
