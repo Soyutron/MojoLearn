@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/toppage/ui/button"
 import { Menu, X, Flame } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { cn } from "@/components/toppage/utils"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
